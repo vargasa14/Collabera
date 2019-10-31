@@ -1,0 +1,23 @@
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class DataOutputStreamExample {
+
+	public static void main(String[] args) {
+		File file = new File ("data.dat");
+		try {
+				FileOutputStream fos = new FileOutputStream(file);
+				DataOutputStream dos = new DataOutputStream(fos);
+				dos.writeInt(12345);
+				dos.writeBoolean(true);
+				dos.writeChar('W');
+				dos.close();	
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+	}
+}
