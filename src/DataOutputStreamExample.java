@@ -1,5 +1,6 @@
 import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
@@ -14,7 +15,9 @@ public class DataOutputStreamExample {
 				dos.writeBoolean(true);
 				dos.writeChar('W');
 				dos.close();	
-		} 
+		} catch (FileNotFoundException x) {
+			System.out.println("FileNotFoundException: " + x.getMessage());
+		}
 		catch (IOException e) 
 		{
 			e.printStackTrace();

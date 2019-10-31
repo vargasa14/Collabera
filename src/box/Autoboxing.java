@@ -8,7 +8,7 @@ public class Autoboxing {
 		int value = Integer.parseInt("100012");
 		System.out.println(value);
 		
-		String valueText = value + "";
+		String valueText = value + " ";
 		String valueText1 = Integer.toString(value);
 		
 		Float floatValue = Float.parseFloat("3.44444");
